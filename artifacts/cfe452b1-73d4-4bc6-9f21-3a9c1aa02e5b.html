@@ -1,273 +1,268 @@
-```html
 <html lang="en" class="bg-background">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Platform - Black & White Theme Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        :root {
-            --primary: #000000;
-            --action: #FFFFFF;
-            --textPrimary: #FFFFFF;
-            --textSecondary: #BFBFBF;
-            --background: #1C1C1C;
-            --surface: #2C2C2C;
-            --border: #FFFFFF;
-            --border-card: #444444;
-            --metric1: #444444;
-            --metric2: #FFFFFF;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--background);
-            color: var(--textPrimary);
-        }
-        
-        .card {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--border-card);
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .metric-card {
-            background: linear-gradient(135deg, var(--metric1), var(--metric2));
-            color: var(--textPrimary);
-            border-radius: 12px;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--metric1));
-            color: var(--action);
-            border: none;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: var(--action);
-            color: var(--primary);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
-        }
-        
-        .input-field {
-            background-color: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 12px 16px;
-            transition: all 0.3s ease;
-        }
-        
-        .input-field:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
-        }
-        
-        .progress-bar {
-            height: 8px;
-            border-radius: 4px;
-            background-color: var(--metric1);
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--metric2));
-            border-radius: 4px;
-        }
-        
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-    </style>
+    <title>E-commerce App - UI/UX Theme Customization</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+      :root {
+          --primary: #000000;
+          --action: #F5B140;
+          --textPrimary: #FFFFFF;
+          --textSecondary: #6C757D;
+          --background: #FFFFFF;
+          --surface: #F4F4F4;
+          --border: #E0E0E0;
+          --border-card: #CCCCCC;
+      }
+      
+      body {
+          font-family: 'Poppins', sans-serif;
+          background-color: var(--background);
+          color: var(--textPrimary);
+      }
+      
+      .card {
+          backdrop-filter: blur(10px);
+          background: rgba(255, 255, 255, 0.8);
+          border: 1px solid var(--border-card);
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+          transition: all 0.3s ease;
+      }
+      
+      .card:hover {
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+          transform: translateY(-2px);
+      }
+      
+      .metric-card {
+          background: linear-gradient(135deg, #000000 0%, #434343 100%);
+          color: white;
+          border-radius: 12px;
+      }
+      
+      .btn-primary {
+          background: linear-gradient(135deg, var(--primary) 0%, #333333 100%);
+          color: white;
+          border: none;
+          transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+          background: linear-gradient(135deg, #1c1c1c 0%, #2b2b2b 100%);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(106, 87, 215, 0.3);
+      }
+      
+      .btn-action {
+          background: linear-gradient(135deg, var(--action) 0%, #FFC96B 100%);
+          color: white;
+          border: none;
+          transition: all 0.3s ease;
+      }
+      
+      .input-field {
+          background-color: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: 8px;
+          padding: 12px 16px;
+          transition: all 0.3s ease;
+      }
+      
+      .input-field:focus {
+          outline: none;
+          border-color: var(--primary);
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+      }
+      
+      .progress-bar {
+          height: 8px;
+          border-radius: 4px;
+          background-color: var(--surface);
+          overflow: hidden;
+      }
+      
+      .progress-fill {
+          height: 100%;
+          background: linear-gradient(90deg, var(--primary), #333333);
+          border-radius: 4px;
+      }
+      
+      .stat-card {
+          background: rgba(255, 255, 255, 0.7);
+          backdrop-filter: blur(10px);
+          border-radius: 12px;
+          border: 1px solid rgba(224, 224, 224, 0.5);
+      }
+  </style>
 </head>
 <body class="bg-background text-textPrimary min-h-screen">
-    <!-- Sticky Header -->
-    <header class="sticky top-0 bg-background/95 backdrop-blur-lg border-b border-slate-600/60 z-50 py-3 px-6">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary to-gray-600 flex items-center justify-center text-white font-bold">EC</div>
-                <h1 class="text-xl font-bold text-primary">E-commerce Platform</h1>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="p-2 rounded-full hover:bg-surface transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-textSecondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                    </svg>
-                </button>
-                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-gray-600 flex items-center justify-center text-white font-semibold">JS</div>
-                <span class="text-sm font-medium">John Smith</span>
-            </div>
-        </div>
-    </header>
-    
-    <main class="px-6 py-8 max-w-7xl mx-auto">
-        <!-- Hero Section -->
-        <section class="mb-10">
-            <div class="flex justify-between items-start mb-6">
-                <div>
-                    <h1 class="text-3xl font-bold mb-2">E-commerce Dashboard</h1>
-                    <p class="text-lg text-textSecondary max-w-3xl">Manage your e-commerce operations efficiently with our dashboard designed for black and white themes.</p>
-                </div>
-                <button class="btn-primary px-6 py-3 rounded-lg font-semibold flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    Add New Product
-                </button>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
-                <div class="metric-card p-5 flex flex-col">
-                    <div class="text-sm mb-1">Total Sales</div>
-                    <div class="text-2xl font-bold">1,245</div>
-                    <div class="text-sm opacity-80 mt-auto">Target: 2,000</div>
-                    <div class="progress-bar mt-3"><div class="progress-fill" style="width: 62%"></div></div>
-                </div>
-                
-                <div class="metric-card p-5 flex flex-col">
-                    <div class="text-sm mb-1">Pending Orders</div>
-                    <div class="text-2xl font-bold">56</div>
-                    <div class="text-sm opacity-80 mt-auto">Target: 100</div>
-                    <div class="progress-bar mt-3"><div class="progress-fill" style="width: 32%"></div></div>
-                </div>
-                
-                <div class="metric-card p-5 flex flex-col">
-                    <div class="text-sm mb-1">Active Users</div>
-                    <div class="text-2xl font-bold">350</div>
-                    <div class="text-sm opacity-80 mt-auto">Target: 500</div>
-                    <div class="progress-bar mt-3"><div class="progress-fill" style="width: 70%"></div></div>
-                </div>
-                
-                <div class="metric-card p-5 flex flex-col">
-                    <div class="text-sm mb-1">Customer Retention</div>
-                    <div class="text-2xl font-bold">85%</div>
-                    <div class="text-sm opacity-80 mt-auto">Target: 90%</div>
-                    <div class="progress-bar mt-3"><div class="progress-fill" style="width: 78%"></div></div>
-                </div>
-            </div>
-        </section>
+  <!-- Sticky Header -->
+  <header class="sticky top-0 bg-black/95 backdrop-blur-xl border-b border-slate-200/60 z-50 py-3 px-6">
+      <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-r from-primary to-black">
+                  <span class="text-white font-bold">UI</span>
+              </div>
+              <div>
+                  <h1 class="text-xl font-bold text-primary">E-commerce App Customization</h1>
+                  <p class="text-xs text-textSecondary">Black and White Design Theme</p>
+              </div>
+          </div>
+          
+          <div class="flex items-center space-x-4">
+              <div class="relative">
+                  <button class="p-2 rounded-full hover:bg-surface transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-textSecondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                      </svg>
+                  </button>
+              </div>
+              <div class="flex items-center space-x-2">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-black flex items-center justify-center text-white font-semibold">M</div>
+                  <span class="text-sm font-medium">Monroe</span>
+              </div>
+          </div>
+      </div>
+  </header>
 
-        <!-- Product Management -->
-        <section class="card p-6 mb-10">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-semibold">Product Management</h2>
-                <div class="flex space-x-3">
-                    <button class="btn-primary px-4 py-2 rounded-lg font-medium">
-                        Save Changes
-                    </button>
-                    <button class="btn-action px-4 py-2 rounded-lg font-medium">
-                        View Reports
-                    </button>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="lg:col-span-2">
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Product Name</label>
-                        <input type="text" class="input-field w-full" placeholder="Enter product name">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Product Description</label>
-                        <textarea class="input-field w-full min-h-[120px]" placeholder="Enter product description..."></textarea>
-                    </div>
-                    
-                    <div class="flex justify-end mt-4">
-                        <button class="btn-primary px-8 py-3 rounded-lg font-semibold flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                            </svg>
-                            Add Product
-                        </button>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="card p-5 h-full">
-                        <h3 class="font-semibold mb-3">Recent Products</h3>
-                        <ul class="space-y-3">
-                            <li class="flex justify-between p-3 border border-border rounded-lg">
-                                <div>Product Name 1</div>
-                                <a class="text-primary" href="#">Edit</a>
-                            </li>
-                            <li class="flex justify-between p-3 border border-border rounded-lg">
-                                <div>Product Name 2</div>
-                                <a class="text-primary" href="#">Edit</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <main class="px-6 py-8 max-w-7xl mx-auto">
+      <!-- Hero Section -->
+      <section class="mb-10">
+          <div class="flex justify-between items-start mb-6">
+              <div>
+                  <h1 class="text-3xl font-bold mb-2">E-commerce Theme Options</h1>
+                  <p class="text-lg text-textSecondary max-w-3xl">Customize your e-commerce experience with user-friendly black and white design options.</p>
+              </div>
+              
+              <button class="btn-primary px-6 py-3 rounded-lg font-semibold flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                  </svg>
+                  Save Theme Options
+              </button>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+              <div class="metric-card p-5 flex flex-col">
+                  <div class="text-sm mb-1">Active Users</div>
+                  <div class="text-2xl font-bold">4,325</div>
+                  <div class="text-sm opacity-80 mt-auto">Target: 5,000</div>
+                  <div class="progress-bar mt-3">
+                      <div class="progress-fill" style="width: 70%"></div>
+                  </div>
+              </div>
+              
+              <div class="metric-card p-5 flex flex-col">
+                  <div class="text-sm mb-1">Carts Created</div>
+                  <div class="text-2xl font-bold">1,200</div>
+                  <div class="text-sm opacity-80 mt-auto">Target: 2,000</div>
+                  <div class="progress-bar mt-3">
+                      <div class="progress-fill" style="width: 60%"></div>
+                  </div>
+              </div>
+              
+              <div class="metric-card p-5 flex flex-col">
+                  <div class="text-sm mb-1">Products Sold</div>
+                  <div class="text-2xl font-bold">2,345</div>
+                  <div class="text-sm opacity-80 mt-auto">Target: 3,500</div>
+                  <div class="progress-bar mt-3">
+                      <div class="progress-fill" style="width: 67%"></div>
+                  </div>
+              </div>
+              
+              <div class="metric-card p-5 flex flex-col">
+                  <div class="text-sm mb-1">Revenue Generated</div>
+                  <div class="text-2xl font-bold">$45,000</div>
+                  <div class="text-sm opacity-80 mt-auto">Target: $60,000</div>
+                  <div class="progress-bar mt-3">
+                      <div class="progress-fill" style="width: 75%"></div>
+                  </div>
+              </div>
+          </div>
+      </section>
 
-        <!-- Analytics Section -->
-        <section class="card p-6 mb-10">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-semibold">Sales Analytics</h2>
-                <div class="flex space-x-2">
-                    <button class="btn-secondary px-3 py-2 rounded-lg text-sm font-medium border border-primary text-primary">
-                        Last 7 Days
-                    </button>
-                    <button class="btn-primary px-3 py-2 rounded-lg text-sm font-medium">
-                        Export Data
-                    </button>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="stat-card p-4">
-                    <div class="text-sm text-textSecondary mb-1">Total Revenue</div>
-                    <div class="text-xl font-bold">$32,000</div>
-                </div>
-                
-                <div class="stat-card p-4">
-                    <div class="text-sm text-textSecondary mb-1">Total Orders</div>
-                    <div class="text-xl font-bold">1,500</div>
-                </div>
-            </div>
-            
-            <canvas id="salesChart" height="200"></canvas>
-        </section>
-    </main>
+      <!-- UI/UX Customization Hub -->
+      <section class="card p-6 mb-10">
+          <div class="flex justify-between items-center mb-6">
+              <h2 class="text-2xl font-semibold">Customize Your UI/UX</h2>
+              <div class="flex space-x-3">
+                  <button class="btn-primary px-4 py-2 rounded-lg font-medium">
+                      Apply Changes
+                  </button>
+              </div>
+          </div>
+          
+          <div>
+              <h3 class="font-semibold mb-3">Select Theme:</h3>
+              <div class="flex space-x-4">
+                  <button class="btn-action px-4 py-2 rounded-lg font-medium">Black Theme</button>
+                  <button class="btn-primary px-4 py-2 rounded-lg font-medium">White Theme</button>
+              </div>
+          </div>
 
-    <script>
-        // Initialize sales chart
-        document.addEventListener('DOMContentLoaded', function() {
-            const salesCtx = document.getElementById('salesChart').getContext('2d');
-            new Chart(salesCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-                    datasets: [{
-                        label: 'Sales',
-                        data: [12000, 19000, 30000, 15000, 22000, 44000, 24000],
-                        backgroundColor: 'rgba(0, 0, 0, 0.2)',
-                        borderColor: '#000000',
-                        borderWidth: 2,
-                        fill: true,
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+          <div class="mt-6">
+              <h3 class="font-semibold mb-3">Feature Customization:</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                      <label class="block text-sm font-medium mb-2">Product Browsing Style:</label>
+                      <select class="input-field w-full">
+                          <option>List View</option>
+                          <option>Grid View</option>
+                      </select>
+                  </div>
+                  <div>
+                      <label class="block text-sm font-medium mb-2">Checkout Style:</label>
+                      <select class="input-field w-full">
+                          <option>One Page Checkout</option>
+                          <option>Multi-Step Checkout</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Actions and Analytics -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+          <!-- User Actions -->
+          <section class="card p-6">
+              <div class="flex justify-between items-center mb-6">
+                  <h2 class="text-2xl font-semibold">User Actions</h2>
+              </div>
+              <div class="space-y-4">
+                  <button class="btn-primary w-full px-4 py-2 rounded-lg">Browse Products</button>
+                  <button class="btn-primary w-full px-4 py-2 rounded-lg">Add to Cart</button>
+                  <button class="btn-primary w-full px-4 py-2 rounded-lg">Checkout</button>
+                  <button class="btn-primary w-full px-4 py-2 rounded-lg">Manage Account</button>
+              </div>
+          </section>
+
+          <!-- Performance Analytics -->
+          <section class="card p-6">
+              <div class="flex justify-between items-center mb-6">
+                  <h2 class="text-2xl font-semibold">Performance Analytics</h2>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                  <div class="stat-card p-4">
+                      <div class="text-sm text-textSecondary mb-1">Total Users</div>
+                      <div class="text-xl font-bold">10,530</div>
+                  </div>
+                  
+                  <div class="stat-card p-4">
+                      <div class="text-sm text-textSecondary mb-1">Monthly Sales</div>
+                      <div class="text-xl font-bold">$150,000</div>
+                  </div>
+              </div>
+          </section>
+      </div>
+  </main>
+
+  <script>
+      // Initialize charts and other functionalities here (if necessary)
+  </script>
 </body>
 </html>
-```
