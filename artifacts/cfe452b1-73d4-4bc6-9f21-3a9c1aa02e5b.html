@@ -1,268 +1,335 @@
-<html lang="en" class="bg-background">
+<html lang="en" class="bg-black">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce App - UI/UX Theme Customization</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-      :root {
-          --primary: #000000;
-          --action: #F5B140;
-          --textPrimary: #FFFFFF;
-          --textSecondary: #6C757D;
-          --background: #FFFFFF;
-          --surface: #F4F4F4;
-          --border: #E0E0E0;
-          --border-card: #CCCCCC;
-      }
-      
-      body {
-          font-family: 'Poppins', sans-serif;
-          background-color: var(--background);
-          color: var(--textPrimary);
-      }
-      
-      .card {
-          backdrop-filter: blur(10px);
-          background: rgba(255, 255, 255, 0.8);
-          border: 1px solid var(--border-card);
-          border-radius: 12px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-          transition: all 0.3s ease;
-      }
-      
-      .card:hover {
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-          transform: translateY(-2px);
-      }
-      
-      .metric-card {
-          background: linear-gradient(135deg, #000000 0%, #434343 100%);
-          color: white;
-          border-radius: 12px;
-      }
-      
-      .btn-primary {
-          background: linear-gradient(135deg, var(--primary) 0%, #333333 100%);
-          color: white;
-          border: none;
-          transition: all 0.3s ease;
-      }
-      
-      .btn-primary:hover {
-          background: linear-gradient(135deg, #1c1c1c 0%, #2b2b2b 100%);
-          transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(106, 87, 215, 0.3);
-      }
-      
-      .btn-action {
-          background: linear-gradient(135deg, var(--action) 0%, #FFC96B 100%);
-          color: white;
-          border: none;
-          transition: all 0.3s ease;
-      }
-      
-      .input-field {
-          background-color: var(--surface);
-          border: 1px solid var(--border);
-          border-radius: 8px;
-          padding: 12px 16px;
-          transition: all 0.3s ease;
-      }
-      
-      .input-field:focus {
-          outline: none;
-          border-color: var(--primary);
-          box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
-      }
-      
-      .progress-bar {
-          height: 8px;
-          border-radius: 4px;
-          background-color: var(--surface);
-          overflow: hidden;
-      }
-      
-      .progress-fill {
-          height: 100%;
-          background: linear-gradient(90deg, var(--primary), #333333);
-          border-radius: 4px;
-      }
-      
-      .stat-card {
-          background: rgba(255, 255, 255, 0.7);
-          backdrop-filter: blur(10px);
-          border-radius: 12px;
-          border: 1px solid rgba(224, 224, 224, 0.5);
-      }
-  </style>
+    <title>E-Commerce App - Theme Customization Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #FFFFFF;
+            --action: #F5B140;
+            --textPrimary: #FFFFFF;
+            --textSecondary: #B0B0B0;
+            --background: #1A1A1A;
+            --surface: #333333;
+            --border: #444444;
+            --border-card: #666666;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--textPrimary);
+        }
+        
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border-card);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #444444 0%, #666666 100%);
+            color: var(--textPrimary);
+            border-radius: 12px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, #FFFFFF 100%);
+            color: var(--background);
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #F5B140 0%, #FFC96B 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(245, 177, 64, 0.3);
+        }
+        
+        .drag-drop-area {
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .drag-drop-area:hover, .drag-drop-area.drag-over {
+            border-color: var(--primary);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: var(--surface);
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--action), #8B7AE8);
+            border-radius: 4px;
+        }
+        
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .badge-primary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--primary);
+        }
+        
+        .badge-success {
+            background: rgba(46, 204, 113, 0.1);
+            color: #2ecc71;
+        }
+        
+        .badge-warning {
+            background: rgba(241, 196, 15, 0.1);
+            color: #f1c40f;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
 </head>
-<body class="bg-background text-textPrimary min-h-screen">
-  <!-- Sticky Header -->
-  <header class="sticky top-0 bg-black/95 backdrop-blur-xl border-b border-slate-200/60 z-50 py-3 px-6">
-      <div class="flex justify-between items-center">
-          <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-r from-primary to-black">
-                  <span class="text-white font-bold">UI</span>
-              </div>
-              <div>
-                  <h1 class="text-xl font-bold text-primary">E-commerce App Customization</h1>
-                  <p class="text-xs text-textSecondary">Black and White Design Theme</p>
-              </div>
-          </div>
-          
-          <div class="flex items-center space-x-4">
-              <div class="relative">
-                  <button class="p-2 rounded-full hover:bg-surface transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-textSecondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                      </svg>
-                  </button>
-              </div>
-              <div class="flex items-center space-x-2">
-                  <div class="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-black flex items-center justify-center text-white font-semibold">M</div>
-                  <span class="text-sm font-medium">Monroe</span>
-              </div>
-          </div>
-      </div>
-  </header>
+<body class="bg-black text-white min-h-screen">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 bg-black/95 backdrop-blur-xl border-b border-gray-600 z-50 py-3 px-6">
+        <div class="flex justify-between items-center">
+            <h1 class="text-xl font-bold text-primary">E-Commerce Theme Customization</h1>
+        </div>
+    </header>
 
-  <main class="px-6 py-8 max-w-7xl mx-auto">
-      <!-- Hero Section -->
-      <section class="mb-10">
-          <div class="flex justify-between items-start mb-6">
-              <div>
-                  <h1 class="text-3xl font-bold mb-2">E-commerce Theme Options</h1>
-                  <p class="text-lg text-textSecondary max-w-3xl">Customize your e-commerce experience with user-friendly black and white design options.</p>
-              </div>
-              
-              <button class="btn-primary px-6 py-3 rounded-lg font-semibold flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                  Save Theme Options
-              </button>
-          </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
-              <div class="metric-card p-5 flex flex-col">
-                  <div class="text-sm mb-1">Active Users</div>
-                  <div class="text-2xl font-bold">4,325</div>
-                  <div class="text-sm opacity-80 mt-auto">Target: 5,000</div>
-                  <div class="progress-bar mt-3">
-                      <div class="progress-fill" style="width: 70%"></div>
-                  </div>
-              </div>
-              
-              <div class="metric-card p-5 flex flex-col">
-                  <div class="text-sm mb-1">Carts Created</div>
-                  <div class="text-2xl font-bold">1,200</div>
-                  <div class="text-sm opacity-80 mt-auto">Target: 2,000</div>
-                  <div class="progress-bar mt-3">
-                      <div class="progress-fill" style="width: 60%"></div>
-                  </div>
-              </div>
-              
-              <div class="metric-card p-5 flex flex-col">
-                  <div class="text-sm mb-1">Products Sold</div>
-                  <div class="text-2xl font-bold">2,345</div>
-                  <div class="text-sm opacity-80 mt-auto">Target: 3,500</div>
-                  <div class="progress-bar mt-3">
-                      <div class="progress-fill" style="width: 67%"></div>
-                  </div>
-              </div>
-              
-              <div class="metric-card p-5 flex flex-col">
-                  <div class="text-sm mb-1">Revenue Generated</div>
-                  <div class="text-2xl font-bold">$45,000</div>
-                  <div class="text-sm opacity-80 mt-auto">Target: $60,000</div>
-                  <div class="progress-bar mt-3">
-                      <div class="progress-fill" style="width: 75%"></div>
-                  </div>
-              </div>
-          </div>
-      </section>
+    <main class="px-6 py-8 max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <section class="mb-10">
+            <div class="flex justify-between items-start mb-6">
+                <h2 class="text-3xl font-bold mb-2">Theme Customization Dashboard</h2>
+                <button class="btn-primary px-6 py-3 rounded-lg font-semibold flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    Change Theme
+                </button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+                <div class="metric-card p-5 flex flex-col">
+                    <div class="text-sm mb-1">Active Users</div>
+                    <div class="text-2xl font-bold">2,349</div>
+                    <div class="text-sm opacity-80 mt-auto">Target: 3,000</div>
+                    <div class="progress-bar mt-3">
+                        <div class="progress-fill" style="width: 78%"></div>
+                    </div>
+                </div>
+                <div class="metric-card p-5 flex flex-col">
+                    <div class="text-sm mb-1">Products Sold</div>
+                    <div class="text-2xl font-bold">5,124</div>
+                    <div class="text-sm opacity-80 mt-auto">Target: 6,000</div>
+                    <div class="progress-bar mt-3">
+                        <div class="progress-fill" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="metric-card p-5 flex flex-col">
+                    <div class="text-sm mb-1">Average Order Value</div>
+                    <div class="text-2xl font-bold">$79.50</div>
+                    <div class="text-sm opacity-80 mt-auto">Target: $100</div>
+                    <div class="progress-bar mt-3">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="metric-card p-5 flex flex-col">
+                    <div class="text-sm mb-1">Customer Satisfaction</div>
+                    <div class="text-2xl font-bold">92%</div>
+                    <div class="text-sm opacity-80 mt-auto">Goal: 95%</div>
+                    <div class="progress-bar mt-3">
+                        <div class="progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- UI/UX Customization Hub -->
-      <section class="card p-6 mb-10">
-          <div class="flex justify-between items-center mb-6">
-              <h2 class="text-2xl font-semibold">Customize Your UI/UX</h2>
-              <div class="flex space-x-3">
-                  <button class="btn-primary px-4 py-2 rounded-lg font-medium">
-                      Apply Changes
-                  </button>
-              </div>
-          </div>
-          
-          <div>
-              <h3 class="font-semibold mb-3">Select Theme:</h3>
-              <div class="flex space-x-4">
-                  <button class="btn-action px-4 py-2 rounded-lg font-medium">Black Theme</button>
-                  <button class="btn-primary px-4 py-2 rounded-lg font-medium">White Theme</button>
-              </div>
-          </div>
+        <!-- Customization Hub -->
+        <section class="card p-6 mb-10">
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold">User Interface Customization</h2>
+                <p class="text-sm text-textSecondary">Switch between black and white themes for a better user experience.</p>
+            </div>
+            <div class="flex justify-between mb-4">
+                <button class="btn-primary px-4 py-2 rounded-lg font-medium">
+                    Black Theme
+                </button>
+                <button class="btn-primary px-4 py-2 rounded-lg font-medium">
+                    White Theme
+                </button>
+            </div>
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center">
+                    <span class="text-lg font-semibold">Upload Custom Theme</span>
+                </div>
+                <div class="drag-drop-area p-6 text-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto text-textSecondary mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <p class="text-sm text-textSecondary">Drag & drop theme file</p>
+                    <p class="text-xs text-textSecondary mt-1">Max file size: 5MB</p>
+                </div>
+            </div>
+            <button class="btn-primary px-8 py-3 rounded-lg font-semibold flex items-center">
+                Apply Custom Theme
+            </button>
+        </section>
 
-          <div class="mt-6">
-              <h3 class="font-semibold mb-3">Feature Customization:</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                      <label class="block text-sm font-medium mb-2">Product Browsing Style:</label>
-                      <select class="input-field w-full">
-                          <option>List View</option>
-                          <option>Grid View</option>
-                      </select>
-                  </div>
-                  <div>
-                      <label class="block text-sm font-medium mb-2">Checkout Style:</label>
-                      <select class="input-field w-full">
-                          <option>One Page Checkout</option>
-                          <option>Multi-Step Checkout</option>
-                      </select>
-                  </div>
-              </div>
-          </div>
-      </section>
+        <!-- Performance & Analytics -->
+        <section class="card p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Performance Analytics</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="stat-card p-4">
+                    <div class="text-sm text-textSecondary mb-1">Theme Switches</div>
+                    <div class="text-xl font-bold">1,532</div>
+                </div>
+                <div class="stat-card p-4">
+                    <div class="text-sm text-textSecondary mb-1">Feedback Submitted</div>
+                    <div class="text-xl font-bold">320</div>
+                </div>
+            </div>
+            
+            <canvas id="themeAnalyticsChart" height="200"></canvas>
+        </section>
 
-      <!-- Actions and Analytics -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-          <!-- User Actions -->
-          <section class="card p-6">
-              <div class="flex justify-between items-center mb-6">
-                  <h2 class="text-2xl font-semibold">User Actions</h2>
-              </div>
-              <div class="space-y-4">
-                  <button class="btn-primary w-full px-4 py-2 rounded-lg">Browse Products</button>
-                  <button class="btn-primary w-full px-4 py-2 rounded-lg">Add to Cart</button>
-                  <button class="btn-primary w-full px-4 py-2 rounded-lg">Checkout</button>
-                  <button class="btn-primary w-full px-4 py-2 rounded-lg">Manage Account</button>
-              </div>
-          </section>
+        <!-- User Actions & Interaction -->
+        <section class="card p-6 mb-10">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">User Actions</h2>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <button class="btn-primary px-4 py-2 rounded-lg font-medium">
+                    View Product Catalog
+                </button>
+                <button class="btn-primary px-4 py-2 rounded-lg font-medium">
+                    Add to Cart
+                </button>
+                <button class="btn-primary px-4 py-2 rounded-lg font-medium">
+                    Checkout
+                </button>
+                <button class="btn-primary px-4 py-2 rounded-lg font-medium">
+                    Manage Account
+                </button>
+            </div>
+        </section>
+    </main>
 
-          <!-- Performance Analytics -->
-          <section class="card p-6">
-              <div class="flex justify-between items-center mb-6">
-                  <h2 class="text-2xl font-semibold">Performance Analytics</h2>
-              </div>
-              
-              <div class="grid grid-cols-2 gap-4 mb-6">
-                  <div class="stat-card p-4">
-                      <div class="text-sm text-textSecondary mb-1">Total Users</div>
-                      <div class="text-xl font-bold">10,530</div>
-                  </div>
-                  
-                  <div class="stat-card p-4">
-                      <div class="text-sm text-textSecondary mb-1">Monthly Sales</div>
-                      <div class="text-xl font-bold">$150,000</div>
-                  </div>
-              </div>
-          </section>
-      </div>
-  </main>
+    <script>
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme Analytics Chart
+            const themeCtx = document.getElementById('themeAnalyticsChart').getContext('2d');
+            new Chart(themeCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                    datasets: [{
+                        label: 'Switches to Black Theme',
+                        data: [50, 120, 90, 150],
+                        borderColor: '#FFFFFF',
+                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                        borderWidth: 2,
+                        fill: true
+                    }, {
+                        label: 'Switches to White Theme',
+                        data: [30, 70, 55, 85],
+                        borderColor: '#F5B140',
+                        backgroundColor: 'rgba(245, 177, 64, 0.1)',
+                        borderWidth: 2,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                drawBorder: false
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    }
+                }
+            });
 
-  <script>
-      // Initialize charts and other functionalities here (if necessary)
-  </script>
+            // Drag and drop functionality
+            const dropArea = document.querySelector('.drag-drop-area');
+            
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, preventDefaults, false);
+            });
+            
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropArea.addEventListener(eventName, highlight, false);
+            });
+            
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, unhighlight, false);
+            });
+            
+            function highlight() {
+                dropArea.classList.add('drag-over');
+            }
+            
+            function unhighlight() {
+                dropArea.classList.remove('drag-over');
+            }
+            
+            dropArea.addEventListener('drop', handleDrop, false);
+            
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                handleFiles(files);
+            }
+            
+            function handleFiles(files) {
+                if (files.length) {
+                    alert(`File "${files[0].name}" ready for processing!`);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
